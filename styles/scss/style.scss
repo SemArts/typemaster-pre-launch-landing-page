@@ -1,0 +1,343 @@
+$red: #f16718;
+$lightRed: #ff9b62;
+$darkblue: #162542;
+$blue: #7b8bad;
+$gray: #e8eff2;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: $darkblue;
+  margin: 0 auto;
+  width: 90%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: $blue;
+}
+
+.btn {
+  border: none;
+  padding: 0.6875rem 0.875rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.625rem;
+  color: white;
+}
+
+header {
+  margin-top: 1.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  .btn {
+    background: $darkblue;
+  }
+}
+
+.image {
+  border-radius: 0.75rem;
+}
+
+.preview {
+  margin-bottom: 1.5rem;
+
+  .preview__text {
+    h1 {
+      margin-bottom: 2rem;
+
+      span {
+        display: block;
+      }
+    }
+
+    .preview__text--p {
+      margin-bottom: 2rem;
+    }
+
+    .preview__text--btn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      .btn {
+        margin-right: 1.875rem;
+        background: $red;
+      }
+    }
+  }
+
+  .preview-img {
+    width: 100%;
+    height: 20.6875rem;
+    background-image: url("../../assets/mobile/image-keyboard.jpg");
+    background-repeat: no-repeat;
+    background-position:25% 75%;
+    transform: translateX(5%) ;
+  }
+}
+
+.info {
+  margin-bottom: 7.4375rem;
+
+  .info__img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.6875rem;
+    height: 12.0625rem;
+
+    .info__img--red {
+      min-width: 40%;
+      max-width: 100%;
+      height: auto;
+      background-color: $red;
+      background-image: url("../../assets/mobile/image-phone-and-keyboard.jpg");
+      background-size: cover;
+      background-position: center left;
+      background-blend-mode: multiply;
+      margin-right: 1.5rem;
+      transform: translateX(-18%);
+    }
+
+    .info__img--keyboard {
+      min-width: 60%;
+      height: auto;
+      background-image: url("../../assets/mobile/image-glass-and-keyboard.jpg");
+      background-size: cover;
+      background-position: center;
+      transform: translateX(-5%);
+    }
+  }
+
+  .info__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1.5rem;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.qualities {
+  margin-bottom: 6rem;
+
+  .qualities__item {
+    text-align: center;
+    margin-top: 4rem;
+
+    .icon {
+      margin: 0 auto;
+      width: 4.0625rem;
+      height: 4.0625rem;
+      background: $red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  body {
+    width: 90%;
+  }
+
+  .preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  
+   
+  
+    .preview-img {
+      transform: translateX(20%);
+      background-position:  bottom left;
+      height: 26.5625rem;
+    }
+  }
+
+  .info {
+    position: relative;
+   
+    .info__img {
+      display: flex;
+      justify-content: space-between;
+      height: 20rem;
+      transform: translateX(0);
+
+      .info__img--red {
+        min-width: 13.375rem;
+        transform: translateX(0);
+        background-image: url("../../assets/tablet/image-phone-and-keyboard.jpg");
+      }
+
+      .info__img--keyboard {
+        transform: translateX(0);
+        background-image: url("../../assets/tablet/image-glass-and-keyboard.jpg");
+        width: max-content;
+      }
+    }
+
+    .info__text {
+      justify-content: space-between;
+      flex-direction: row;
+      text-align: start;
+
+      h2 {
+        align-self: center;
+        margin: 0;
+      }
+
+      p {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .qualities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.375rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  body {
+    width: 77%;
+  }
+  .preview {
+    &::before {
+      content: ' ';
+      position: absolute;
+      background-image: url('../../assets/shared/pattern-square.svg');
+      background-repeat: no-repeat;
+      top: 0;
+      right: -30%;
+     
+      background-position: top right;
+      width: 100%;
+      height: 100%;
+    }
+    .preview-img {
+      transform: translateX(0);
+      background-size:cover;
+      background-position: center left;
+      width: 50%;
+      height: 30rem;
+    }
+    .preview__text {
+      max-width: 40%;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    &::before   {
+      content: ' ';
+      position: absolute;
+      background-image: url('../../assets/shared/pattern-square.svg');
+      background-repeat: no-repeat;
+      bottom:  13.5%;
+      left: -30%;
+     
+      background-position: bottom left;
+      width: 100%;
+      height: 100%;
+    }
+    .info__img {
+      justify-content: start;
+      min-height: 30rem;
+      width: 60%;
+      .info__img--red {
+        background-image: url("../../assets/desktop/image-phone-and-keyboard.jpg");
+        min-width: 40%;
+        max-width: 15.9375rem;
+      }
+      .info__img--keyboard {
+        background-image: url("../../assets/desktop/image-glass-and-keyboard.jpg");
+        min-width: 60%;
+        max-width: 27.8125rem;
+      }
+    }
+    .info__text {
+      justify-content: center;
+      align-items:stretch   ;
+      flex-direction: column;
+     
+      
+      max-width: 30%;
+      h2 {
+        align-self: stretch;
+        margin-bottom: 1.6875rem;
+      }
+      p{
+        max-width: 80%;
+      }
+    }
+  }
+  .qualities {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media  screen and (min-width:100rem ) {
+  body{
+    width: 60%;
+  }
+  .preview{
+    &::before{
+      right:-42%;
+    }
+  }
+  .info{
+    &::before{
+      left: -42%;
+    }
+  }
+}
